@@ -15,11 +15,11 @@ class CreateSuperSmashBrosTable extends Migration
     {
         Schema::create('super_smash_bros', function (Blueprint $table) {
             $table->increments('id')->primary();
-            $table->integer('player_id');
-            $table->integer('year')->nullable();
-            $table->integer('placing')->nullable();
-            $table->integer('result')->nullable();
-            $table->integer('points')->nullable();
+            $table->integer('player_id', false, true)->nullable();
+            $table->tinyInteger('year')->nullable();
+            $table->string('placing', 10)->nullable();
+            $table->tinyInteger('result')->nullable();
+            $table->tinyInteger('points')->nullable();
             $table->timestamps();
         });
     }
