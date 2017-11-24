@@ -14,7 +14,12 @@ class CreateMarioPartysTable extends Migration
     public function up()
     {
         Schema::create('mario_partys', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->primary();
+            $table->integer('player_id');
+            $table->integer('year')->nullable();
+            $table->integer('placing')->nullable();
+            $table->integer('result')->nullable();
+            $table->integer('points')->nullable();
             $table->timestamps();
         });
     }
