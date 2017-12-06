@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Player;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Storage;
 
 class ImportPlayers extends Command
 {
@@ -11,14 +13,14 @@ class ImportPlayers extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'import:players';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Importing players from json';
 
     /**
      * Create a new command instance.
@@ -37,6 +39,16 @@ class ImportPlayers extends Command
      */
     public function handle()
     {
-        //
+        $this->info("Starting input of ...");
+        $jsondata = Storage::get('players.json');
+        $data = json_decode($jsondata, true);
+
+        foreach ($data as $item) {
+            $this->info("Updating player: ".$item['id']);
+            $player = Player::findOrNew($item['id']);
+            $player->fill($item)->save();
+        }
+
+        $this->info("Players imported");
     }
 }

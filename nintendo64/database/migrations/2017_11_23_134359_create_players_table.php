@@ -14,11 +14,12 @@ class CreatePlayersTable extends Migration
     public function up()
     {
         Schema::create('players', function (Blueprint $table) {
-            $table->increments('id')->primary();
+            $table->increments('id');
             $table->string('first_name', 50)->nullable();
             $table->string('last_name', 50)->nullable();
             $table->string('characters', 500)->nullable();
-            $table->string('additional_info', 1500)->nullable();
+            $table->string('unofficial_prizes', 500)->nullable();
+            $table->string('records', 1500)->nullable();
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMarioPartysTable extends Migration
+class CreateMarioPartiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateMarioPartysTable extends Migration
      */
     public function up()
     {
-        Schema::create('mario_partys', function (Blueprint $table) {
-            $table->increments('id')->primary();
+        Schema::create('mario_parties', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('player_id', false, true)->nullable();
-            $table->tinyInteger('year')->nullable();
+            $table->integer('year')->nullable();
             $table->string('placing', 10)->nullable();
             $table->tinyInteger('result')->nullable();
             $table->tinyInteger('points')->nullable();
@@ -31,6 +31,6 @@ class CreateMarioPartysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mario_partys');
+        Schema::dropIfExists('mario_parties');
     }
 }

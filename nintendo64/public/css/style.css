@@ -1,0 +1,39 @@
+/*** General Styles ***/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+.no-margin {
+    margin: 0 !important;
+}
+.full-width {
+    width: 100%;
+    max-width: 3000px;
+}
+/*** Home page styles ***/
+/*#welcome-img {
+    height: 100vh;
+}*/
+/*** Nav styles ***/
+nav {
+    -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    z-index: 998;
+    padding: 0 10px 0 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/*** Footer Styles ***/
+.page-footer {
+    padding-top: 0;
+}

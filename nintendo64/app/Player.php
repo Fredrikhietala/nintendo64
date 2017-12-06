@@ -11,7 +11,8 @@ class Player extends Model
       'first_name',
       'last_name',
       'characters',
-      'additional_info',
+      'unofficial_prizes',
+      'records',
       'created_at',
       'updated_at'
     ];

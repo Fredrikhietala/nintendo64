@@ -14,9 +14,9 @@ class CreateSuperSmashBrosTable extends Migration
     public function up()
     {
         Schema::create('super_smash_bros', function (Blueprint $table) {
-            $table->increments('id')->primary();
+            $table->increments('id');
             $table->integer('player_id', false, true)->nullable();
-            $table->tinyInteger('year')->nullable();
+            $table->integer('year')->nullable();
             $table->string('placing', 10)->nullable();
             $table->tinyInteger('result')->nullable();
             $table->tinyInteger('points')->nullable();
