@@ -19,23 +19,22 @@
 <nav class="transparent black-text fixed" role="navigation">
     <div class="nav-wrapper container full-width">
         <ul id="slide-out" class="side-nav">
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
+            <li><a href="#!">Start</a></li>
+            <li><a href="{{ '/players' }}">Deltagare</a></li>
             <li class="no-padding">
                 <ul class="collapsible collapsible-accordion">
                     <li>
-                        <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+                        <a class="collapsible-header">Resultat<i class="material-icons right">arrow_drop_down</i></a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="#!">First</a></li>
-                                <li><a href="#!">Second</a></li>
-                                <li><a href="#!">Third</a></li>
-                                <li><a href="#!">Fourth</a></li>
+                                <li><a href="#!">2016</a></li>
+                                <li><a href="#!">2017</a></li>
                             </ul>
                         </div>
                     </li>
                 </ul>
             </li>
+            <li><a href="#!">Rekord</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons black-text">menu</i></a>
     </div>

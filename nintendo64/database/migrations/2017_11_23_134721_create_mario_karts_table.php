@@ -14,12 +14,12 @@ class CreateMarioKartsTable extends Migration
     public function up()
     {
         Schema::create('mario_karts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('player_id', false, true)->nullable();
-            $table->integer('year')->nullable();
-            $table->string('placing', 10)->nullable();
-            $table->tinyInteger('result')->nullable();
-            $table->tinyInteger('points')->nullable();
+            $table->unsignedInteger('id')->primary();
+            $table->unsignedInteger('player_id')->index();
+            $table->integer('year');
+            $table->string('placing', 10);
+            $table->unsignedTinyInteger('result');
+            $table->unsignedTinyInteger('points');
             $table->timestamps();
         });
     }
